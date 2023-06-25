@@ -8,7 +8,7 @@ int search(int numbers[], int low, int high, int value)
 	//ensures the value has a place to go
 	int mid=(low+high)/2;
 	//establishing the midpoint of the numbers 
-	if (low==high || value==mid) {
+	if (low==high||value==mid) {
 		return mid;
 	}
 	//ensures that the mid is returned when the low and high equal
@@ -18,6 +18,7 @@ int search(int numbers[], int low, int high, int value)
 	} else if (value>numbers[mid]){
 		return search(numbers,mid+1,high,value);
 	}
+	return -1;
 }
 
 void printArray(int numbers[], int sz)
